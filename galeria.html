@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería - Lord of The Mysteries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Estilos generales (navbar, footer, etc.) -->
+    <link rel="stylesheet" href="css/gallery.css" />
+    <!-- Estilos específicos de la galería -->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">Lord Of The Mysteries</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#characters" class="nav-link">Personajes</a>
+          </li>
+          <li class="nav-item">
+            <a href="galeria.html" class="nav-link">Galería</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Capítulos</a></li>
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-link">Contacto</a>
+          </li>
+        </ul>
+        <button class="hamburger" aria-label="Abrir menú">
+          <div class="bar"></div>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-section">
+        <h2>Galería de Momentos</h2>
+        <div class="gallery-grid">
+          <!-- Fila 1 -->
+          <a
+            href="imagenes/gallery/full/image1.webp"
+            class="gallery-item"
+            data-title="Aquí puedes poner una descripción para la imagen 1."
+          >
+            <img
+              src="imagenes/gallery/thumb/image1.webp"
+              alt="Arte de Lord of the Mysteries 1"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <a
+            href="imagenes/gallery/full/image2.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 2."
+          >
+            <img
+              src="imagenes/gallery/thumb/image2.webp"
+              alt="Arte de Lord of the Mysteries 2"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <a
+            href="imagenes/gallery/full/image3.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 3."
+          >
+            <img
+              src="imagenes/gallery/thumb/image3.webp"
+              alt="Arte de Lord of the Mysteries 3"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <a
+            href="imagenes/gallery/full/image4.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 4."
+          >
+            <img
+              src="imagenes/gallery/thumb/image4.webp"
+              alt="Arte de Lord of the Mysteries 4"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <!-- Fila 2 -->
+          <a
+            href="imagenes/gallery/full/image5.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 5."
+          >
+            <img
+              src="imagenes/gallery/thumb/image5.webp"
+              alt="Arte de Lord of the Mysteries 5"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <a
+            href="imagenes/gallery/full/image6.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 6."
+          >
+            <img
+              src="imagenes/gallery/thumb/image6.webp"
+              alt="Arte de Lord of the Mysteries 6"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <a
+            href="imagenes/gallery/full/image7.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 7."
+          >
+            <img
+              src="imagenes/gallery/thumb/image7.webp"
+              alt="Arte de Lord of the Mysteries 7"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+          <a
+            href="imagenes/gallery/full/image8.webp"
+            class="gallery-item"
+            data-title="Descripción para la imagen 8."
+          >
+            <img
+              src="imagenes/gallery/thumb/image8.webp"
+              alt="Arte de Lord of the Mysteries 8"
+            />
+            <div class="gallery-item-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Estructura del Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-counter"></div>
+      <button class="lightbox-close" title="Cerrar (Esc)">&times;</button>
+      <button class="lightbox-prev" title="Anterior (Flecha Izquierda)">
+        &#10094;
+      </button>
+      <button class="lightbox-next" title="Siguiente (Flecha Derecha)">
+        &#10095;
+      </button>
+      <div class="lightbox-content">
+        <img src="" class="lightbox-img" alt="Imagen ampliada" />
+        <div class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-social">
+        <a
+          href="#"
+          target="_blank"
+          aria-label="Página oficial del autor"
+          title="Web Oficial"
+          ><i class="fas fa-globe"></i
+        ></a>
+        <a
+          href="#"
+          target="_blank"
+          aria-label="Patreon del autor"
+          title="Patreon"
+          ><i class="fab fa-patreon"></i
+        ></a>
+        <a
+          href="#"
+          target="_blank"
+          aria-label="Twitter del autor"
+          title="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <p class="footer-legal">
+        &copy; 2023 Fan Page - Lord of The Mysteries. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
