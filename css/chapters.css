@@ -1,0 +1,60 @@
+/* Estilos específicos para la página de Capítulos */
+
+.chapters-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chapters-section h2 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.chapters-section h2::before,
+.chapters-section h2::after {
+  content: "";
+  height: 1px;
+  background-color: rgba(197, 179, 88, 0.4);
+  flex-grow: 1;
+  max-width: 250px;
+}
+
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.chapter-item {
+  background-color: var(--secondary-bg);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 4px 4px 0;
+  padding: 1.5rem 2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chapter-item:hover {
+  background-color: var(--card-bg);
+  transform: translateX(10px);
+}
+
+.chapter-item-header h3 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.chapter-item-body p {
+  color: var(--text-color);
+  line-height: 1.7;
+}
