@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - Lord of The Mysteries</title>
+<<<<<<< Updated upstream
+=======
+    <link rel="icon" type="image/webp" href="imagenes/favicon.webp" />
+>>>>>>> Stashed changes
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,13 +32,33 @@
             <a href="index.html" class="nav-link">Inicio</a>
           </li>
           <li class="nav-item">
+<<<<<<< Updated upstream
             <a href="index.html#characters" class="nav-link">Personajes</a>
+=======
+          <li class="nav-item nav-item-dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Capítulos <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="capitulos-destacados.html">Capítulos Destacados</a></li>
+              <li class="nav-item-submenu">
+                <a href="volumenes.html">Volúmenes <i class="fas fa-caret-right"></i></a>
+                <ul class="submenu">
+                  <li><a href="volumenes.html#volumen-1">Volumen 1: Payaso</a></li>
+                  <li><a href="volumenes.html#volumen-2">Volumen 2: El Sin Rostro</a></li>
+                  <li><a href="volumenes.html#volumen-3">Volumen 3: El Viajero</a></li>
+                </ul>
+              </li>
+            </ul>
+>>>>>>> Stashed changes
           </li>
           <li class="nav-item">
             <a href="galeria.html" class="nav-link">Galería</a>
           </li>
           <li class="nav-item">
+<<<<<<< Updated upstream
             <a href="Capitulos.html" class="nav-link">Capítulos</a>
+=======
+            <a href="index.html#characters" class="nav-link">Personajes</a>
+>>>>>>> Stashed changes
           </li>
           <li class="nav-item">
             <a href="contacto.html" class="nav-link">Contacto</a>
@@ -60,6 +84,10 @@
               <li><strong>Email:</strong> contacto@lotm.fan</li>
               <li><strong>Ubicación:</strong> Backlund, Reino de Loen</li>
             </ul>
+<<<<<<< Updated upstream
+=======
+            <div id="map"></div>
+>>>>>>> Stashed changes
           </div>
           <div class="contact-form-wrapper">
             <form action="#" method="post" class="contact-form">
@@ -131,5 +159,28 @@
     </footer>
 
     <script src="js/script.js"></script>
+<<<<<<< Updated upstream
+=======
+    <script>
+      // Función para inicializar el mapa de Google
+      function initMap() {
+        // Coordenadas de la UTN Regional Haedo
+        const utnHaedo = { lat: -34.64068673960262, lng: -58.602034510310645 };
+        // Crear el mapa, centrado en la UTN
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: utnHaedo,
+        });
+        // Crear un marcador en la posición de la UTN
+        const marker = new google.maps.Marker({
+          position: utnHaedo,
+          map: map,
+          title: "UTN Facultad Regional Haedo",
+        });
+      }
+    </script>
+    <!-- Carga la API de Google Maps. Reemplaza 'TU_API_KEY_AQUI' con tu clave real -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1rhSgApzaa3tt7EMQQQhhgYYeLeIYVYM&callback=initMap"></script>
+>>>>>>> Stashed changes
   </body>
 </html>

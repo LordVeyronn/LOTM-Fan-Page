@@ -60,6 +60,98 @@ body {
   color: var(--accent-color);
 }
 
+.dropdown-toggle {
+  cursor: default; /* El enlace principal del dropdown no es clickeable */
+}
+
+
+/* Estilos para el menú desplegable */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-item-dropdown .nav-link i {
+  margin-left: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--secondary-bg);
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-item-dropdown:hover .nav-link i {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(
+    --card-bg
+  ); /* Fondo sutil al pasar el mouse, como en las tarjetas */
+  color: var(--accent-color);
+}
+
+/* Estilos para el submenú anidado */
+.nav-item-submenu {
+  position: relative;
+}
+
+.nav-item-submenu > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Por defecto, se abre a la derecha */
+  background-color: var(--secondary-bg);
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Clase de respaldo para abrir a la izquierda */
+.submenu.opens-left {
+  left: auto;
+  right: 100%;
+}
+
+.nav-item-submenu:hover > .submenu {
+  display: block;
+}
+
+.nav-item-submenu > a .fa-caret-right {
+  /* Vuelve a apuntar a la derecha por defecto */
+  transition: transform 0.3s ease;
+}
+.nav-item-submenu:hover > a .fa-caret-right {
+  transform: rotate(90deg); /* Gira al hacer hover */
+}
 /* Menú Hamburguesa */
 .hamburger {
   display: none;
@@ -191,7 +283,8 @@ body {
   transition: transform 0.4s ease-in-out;
 }
 
-.character-card:hover .character-info {
+.character-card:hover .character-info,
+.character-card.is-touched .character-info {
   transform: translateY(0);
 }
 
@@ -342,6 +435,14 @@ body {
   background-color: #e0d186; /* Un dorado más claro */
 }
 
+/* Mapa dentro de la sección de contacto */
+#map {
+  height: 250px; /* Altura reducida para un mapa más pequeño */
+  width: 100%;
+  margin-top: 1.5rem; /* Espacio entre la lista y el mapa */
+  border-radius: 8px;
+}
+
 /* Footer */
 .site-footer {
   text-align: center;
@@ -415,6 +516,58 @@ body {
   .btn-submit {
     width: 100%;
     display: block; /* Asegura que ocupe todo el ancho disponible */
+  }
+
+  .dropdown-toggle {
+    cursor: pointer; /* Hacemos que sea clickeable en móvil */
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none; /* Oculto por defecto en móvil */
+    background-color: transparent;
+    box-shadow: none;
+    min-width: unset;
+    padding-left: 2rem; /* Indentación para los sub-items */
+    border-radius: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Cuando el dropdown está activo en móvil, se muestra */
+  .nav-item-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .nav-item-dropdown .nav-link i {
+    display: inline-block; /* Mostrar flecha en móvil */
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotar la flecha en móvil */
+  .nav-item-dropdown.active .nav-link i {
+    transform: rotate(180deg);
+  }
+
+  .nav-item-dropdown:hover .dropdown-menu {
+    display: none; /* Desactivamos el hover en móvil */
+  }
+
+  /* Estilos del submenú en móvil */
+  .submenu {
+    position: static;
+    display: none; /* Oculto por defecto */
+    box-shadow: none;
+    padding-left: 1rem; /* Mayor indentación */
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-item-submenu.active > .submenu {
+    display: block;
+  }
+
+  .nav-item-submenu:hover > .submenu {
+    display: none; /* Desactivar hover en móvil */
   }
 
   .contact-details {
