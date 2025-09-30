@@ -1,11 +1,12 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const dropdownToggle = document.querySelector(".dropdown-toggle");
-const submenuToggle = document.querySelector(".nav-item-submenu > a");
+const submenuToggle = document.querySelector(".nav-item-submenu > a"); // Este selector es problemático, lo corregiremos más adelante.
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
+  document.body.classList.toggle("no-scroll"); // Evita el scroll del body cuando el menú está abierto
 });
 
 document.querySelectorAll(".nav-link").forEach((n) => {
@@ -17,6 +18,7 @@ document.querySelectorAll(".nav-link").forEach((n) => {
     n.addEventListener("click", () => {
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
+      document.body.classList.remove("no-scroll"); // Permite el scroll de nuevo al cerrar el menú
     });
   }
 });
@@ -91,16 +93,18 @@ if (dropdownToggle) {
 }
 
 // Lógica para el submenú en móvil
-if (submenuToggle) {
-  submenuToggle.addEventListener("click", (e) => {
-    // Solo activar en vista móvil
+document.querySelectorAll(".nav-item-submenu > a").forEach((submenuLink) => {
+  submenuLink.addEventListener("click", (e) => {
+    // Solo activar en vista móvil (cuando el menú hamburguesa es visible)
     if (window.getComputedStyle(hamburger).display !== "none") {
-      // Prevenir que el enlace principal navegue
-      e.preventDefault();
-      submenuToggle.parentElement.classList.toggle("active");
-    }
+      // Prevenir que el enlace principal navegue si es un enlace de submenú
+      if (submenuLink.nextElementSibling && submenuLink.nextElementSibling.classList.contains("submenu")) {
+        e.preventDefault();
+      }
+      submenuLink.parentElement.classList.toggle("active");
+    } 
   });
-}
+});
 
 // Lógica para posicionamiento dinámico del submenú
 document.querySelectorAll(".nav-item-submenu").forEach((item) => {
