@@ -1,3 +1,4 @@
+/*cambio forzado*/ 
 // Lógica para la galería Lightbox
 document.addEventListener("DOMContentLoaded", () => {
   // Selecciona los elementos de la galería solo si estamos en una página que los contiene.
